@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoresListXibTableView" rowHeight="229" id="wbK-SZ-Ot6" customClass="StoresListXibTableView" customModule="greenBag" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="649" height="229"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wbK-SZ-Ot6" id="WcV-1W-wKZ">
+                <rect key="frame" x="0.0" y="0.0" width="649" height="229"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jmM-eJ-52X" customClass="CustomBorderView" customModule="greenBag" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="5" width="649" height="219"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummyStoreImage" translatesAutoresizingMaskIntoConstraints="NO" id="S9m-fP-XKa">
+                                <rect key="frame" x="10" y="10" width="139" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="139" id="MPK-dq-iU7"/>
+                                    <constraint firstAttribute="height" constant="114" id="owA-rf-TQY"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18M-Zt-3BA" customClass="CustomRoundedButton" customModule="greenBag" customModuleProvider="target">
+                                <rect key="frame" x="486" y="45.333333333333336" width="143" height="30.000000000000007"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="143" id="jpx-8w-S21"/>
+                                    <constraint firstAttribute="height" constant="30" id="yRB-3H-5O2"/>
+                                </constraints>
+                                <color key="tintColor" red="0.43921568989999998" green="0.59215688710000003" blue="0.77647060160000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Details">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="12"/>
+                                    <color key="baseBackgroundColor" name="appDarkGreenColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="storeDetailsButtonPressed:" destination="wbK-SZ-Ot6" eventType="touchUpInside" id="4EA-3B-A6G"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Earthly Essentials" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VxB-Uu-YBe">
+                                <rect key="frame" x="495.66666666666669" y="9.9999999999999982" width="133.33333333333331" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1EZ-sP-Ngs" customClass="CustomRoundedButton" customModule="greenBag" customModuleProvider="target">
+                                <rect key="frame" x="486" y="90.333333333333329" width="143" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="143" id="AMb-Nh-LNI"/>
+                                    <constraint firstAttribute="height" constant="30" id="Uoc-ut-Z7y"/>
+                                </constraints>
+                                <color key="tintColor" red="0.43921568989999998" green="0.59215688710000003" blue="0.77647060160000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Delete Store">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="12"/>
+                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="deleteStoreButtonPressed:" destination="wbK-SZ-Ot6" eventType="touchUpInside" id="k7i-2C-z64"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="S9m-fP-XKa" firstAttribute="top" secondItem="jmM-eJ-52X" secondAttribute="top" constant="10" id="4IU-bi-2Kj"/>
+                            <constraint firstItem="1EZ-sP-Ngs" firstAttribute="trailing" secondItem="18M-Zt-3BA" secondAttribute="trailing" id="4Qn-VG-w2J"/>
+                            <constraint firstItem="18M-Zt-3BA" firstAttribute="trailing" secondItem="VxB-Uu-YBe" secondAttribute="trailing" id="6e7-hK-ch2"/>
+                            <constraint firstAttribute="trailing" secondItem="VxB-Uu-YBe" secondAttribute="trailing" constant="20" id="9mf-yb-wxi"/>
+                            <constraint firstItem="18M-Zt-3BA" firstAttribute="top" secondItem="VxB-Uu-YBe" secondAttribute="bottom" constant="15" id="NNP-8B-RaO"/>
+                            <constraint firstItem="S9m-fP-XKa" firstAttribute="leading" secondItem="jmM-eJ-52X" secondAttribute="leading" constant="10" id="S7o-jP-2Te"/>
+                            <constraint firstItem="1EZ-sP-Ngs" firstAttribute="top" secondItem="18M-Zt-3BA" secondAttribute="bottom" constant="15" id="eq5-Jw-Lpq"/>
+                            <constraint firstItem="VxB-Uu-YBe" firstAttribute="top" secondItem="S9m-fP-XKa" secondAttribute="top" id="zZa-eE-sYf"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="jmM-eJ-52X" firstAttribute="leading" secondItem="WcV-1W-wKZ" secondAttribute="leading" id="DEV-HV-tjI"/>
+                    <constraint firstAttribute="bottom" secondItem="jmM-eJ-52X" secondAttribute="bottom" constant="5" id="E2g-DG-uAt"/>
+                    <constraint firstItem="jmM-eJ-52X" firstAttribute="top" secondItem="WcV-1W-wKZ" secondAttribute="top" constant="5" id="VP8-Hq-Pof"/>
+                    <constraint firstAttribute="trailing" secondItem="jmM-eJ-52X" secondAttribute="trailing" id="zrt-0s-pc4"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="storeImage" destination="S9m-fP-XKa" id="6Y8-ry-sJW"/>
+                <outlet property="storeName" destination="VxB-Uu-YBe" id="Xto-lg-xDl"/>
+            </connections>
+            <point key="canvasLocation" x="171.75572519083968" y="-90.492957746478879"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="dummyStoreImage" width="259" height="194"/>
+        <namedColor name="appDarkGreenColor">
+            <color red="0.38039215686274508" green="0.65490196078431373" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
